@@ -11,7 +11,7 @@ function solution(k, tangerine) {
     for(let i=0;i<species.length;i++){
         const t=species[i]
         
-        if(stack[stack.length-1]!==t) stack.push(t)
+        stack.push(t)
         k-=organized[species[i]]
         
         if(k<=0) break
