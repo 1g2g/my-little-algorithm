@@ -2,7 +2,7 @@ function solution(k, tangerine) {
     const stack=[]
     
     const organized=tangerine.reduce((obj,t)=>{
-        obj[t]=obj[t]?obj[t]+1:1
+        obj[t]=(obj[t]||0)+1
         return obj
     },new Object())
     
