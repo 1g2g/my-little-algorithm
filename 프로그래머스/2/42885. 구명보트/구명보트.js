@@ -1,21 +1,16 @@
 function solution(people, limit) {
-    let answer = 0
-    const len=people.length
-    let r=len-1,l=0 
+    let answer = 0;
     
     people.sort((a,b)=>b-a)
-     
     
+    let l=0,r=people.length-1
     while(l<=r){
-        const left=people[l]
-        const right=people[r] 
-        
-        if(left+right<=limit){
-            r-- 
+        if(people[l]+people[r]<=limit){
+            r--
         }
         l++
-        answer++ 
+        answer++
     }
     
     return answer;
-} 
+}
